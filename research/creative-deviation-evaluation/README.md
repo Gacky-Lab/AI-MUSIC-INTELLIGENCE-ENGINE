@@ -5,7 +5,9 @@
 Gacky-Lab · Independent research proposal · 2026-11-26 (JST)  
 **Status: Proposed / Empirically unvalidated (NOT_RUN).**
 
-[One-page research framework (HTML)](CDE_public_research_framework.html) — download and open locally in a browser to view the full layout.
+[![CDE one-page research framework](CDE_public_research_framework.svg)](CDE_public_research_framework.svg)
+
+[Full-size English overview (SVG)](CDE_public_research_framework.svg) · [Original Japanese HTML source](CDE_public_research_framework.html) — download and open in a browser; GitHub displays HTML as source. The specification below is authoritative.
 
 > Not every deviation is a defect. Not every acceptance is a discovery. Not every rejection is a failure.
 
