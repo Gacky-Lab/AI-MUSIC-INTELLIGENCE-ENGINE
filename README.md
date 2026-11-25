@@ -33,6 +33,9 @@ The fixture is an original synthetic pulse train. The analyzer supports uncompre
 - [JSON Schema](schemas/analysis_evidence.schema.json)
 - [Actions](https://github.com/Gacky-Lab/AI-MUSIC-INTELLIGENCE-ENGINE/actions)
 
+## Research proposals
+- [Creative Deviation Evaluation (CDE) v0.1](research/creative-deviation-evaluation/README.md) — a proposed protocol for separating artifact adoption from preference for unintended musical changes (empirical validation NOT_RUN).
+
 ## Related research
 - [LYRIC-DESIGN-FRAMEWORK](https://github.com/Gacky-Lab/LYRIC-DESIGN-FRAMEWORK)
 - [SUNO-GENERATION-OPTIMIZER](https://github.com/Gacky-Lab/SUNO-GENERATION-OPTIMIZER)
