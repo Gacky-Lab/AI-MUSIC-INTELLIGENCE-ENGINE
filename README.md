@@ -1,9 +1,11 @@
 # AI-MUSIC-INTELLIGENCE-ENGINE
 
+[![Offline CI](https://github.com/Gacky-Lab/AI-MUSIC-INTELLIGENCE-ENGINE/actions/workflows/offline.yml/badge.svg?branch=main)](https://github.com/Gacky-Lab/AI-MUSIC-INTELLIGENCE-ENGINE/actions/workflows/offline.yml) · [Gacky-Lab research portfolio](https://github.com/Gacky-Lab/AI-MUSIC-VIDEO-STUDIO/blob/main/docs/profile/README.md)
+
 **Reproducible music analysis and evidence for human-led AI production.**  
 音楽理解・歌唱解析・品質評価のための共通研究基盤。
 
-Status: Phase 0 implementation candidate (2026-11-25 JST). This is not a trained music understanding model, pitch transcription engine or verified musical-quality predictor.
+Status: Phase 0 offline synthetic verification passed (2026-11-25 JST). This is not a trained music understanding model, pitch transcription engine or verified musical-quality predictor.
 
 ```mermaid
 flowchart LR
@@ -38,3 +40,6 @@ The fixture is an original synthetic pulse train. The analyzer supports uncompre
 - [AI-MUSIC-VIDEO-STUDIO](https://github.com/Gacky-Lab/AI-MUSIC-VIDEO-STUDIO)
 
 This project proposes a shared evidence layer; upstream integrations have not been implemented. No private audio, credentials or proprietary voicebanks are published. License undecided. Independent research, not affiliated with product providers.
+
+## Verified evidence
+[PR CI run](https://github.com/Gacky-Lab/AI-MUSIC-INTELLIGENCE-ENGINE/actions/runs/45542408140): Python 3.11 and 3.13 passed the eight-test suite and synthetic WAV demo; the known 120 pulses/min fixture yielded a 120.0 pulses/min candidate. JSON evidence is attached to CI artifacts. Real-song BPM accuracy, pitch, transcription, alignment, artistic quality and cross-project integration remain NOT_RUN.
