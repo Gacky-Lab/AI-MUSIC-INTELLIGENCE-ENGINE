@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source_sha256",
+    "sample_rate_hz",
+    "channels",
+    "sample_frames",
+    "duration_s",
+    "rms_dbfs",
+    "sample_peak_dbfs",
+    "clipped_samples",
+    "silent_window_fraction",
+    "window_samples",
+    "pulse",
+    "pitch_status",
+    "lyrics_status",
+    "artistic_acceptance"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "sample_rate_hz": {
+      "type": "integer",
+      "minimum": 8000,
+      "maximum": 96000
+    },
+    "channels": {
+      "enum": [
+        1,
+        2
+      ]
+    },
+    "sample_frames": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "duration_s": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 300
+    },
+    "rms_dbfs": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "sample_peak_dbfs": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "clipped_samples": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "silent_window_fraction": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "window_samples": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "pulse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "pulse_per_minute",
+        "energy_onsets_s",
+        "verified_musical_bpm"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "UNKNOWN"
+          ]
+        },
+        "pulse_per_minute": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 60,
+          "maximum": 240
+        },
+        "energy_onsets_s": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "verified_musical_bpm": {
+          "const": false
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "UNKNOWN"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "pulse_per_minute": {
+                "type": "null"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "pulse_per_minute": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "pitch_status": {
+      "const": "NOT_RUN"
+    },
+    "lyrics_status": {
+      "const": "NOT_RUN"
+    },
+    "artistic_acceptance": {
+      "const": "NOT_RUN"
+    }
+  }
+}
