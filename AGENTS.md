@@ -1,0 +1,2 @@
+# Agent instructions
+Use only authorized input, synthetic public fixtures and offline tests by default. No paid calls or external uploads without explicit approval. Distinguish sample peak from true peak, RMS from LUFS, pulse candidates from beats and note candidates from verified transcription. UNKNOWN and NOT_RUN are valid outcomes. Never overwrite upstream evidence or claim a music-quality improvement from synthetic tests. Pin future model and dependency versions; document model and dataset licenses. Do not publish private lyrics or recordings.
